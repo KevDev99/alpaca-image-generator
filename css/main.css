@@ -1,0 +1,71 @@
+body {
+  background-color: var(--background-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5em;
+}
+
+:root {
+  --primary-color: rgb(1, 27, 75);
+  --background-color: rgb(238, 237, 237);
+}
+
+h1 {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+/* Alpaca */
+.alpaca {
+  position: relative;
+}
+
+.alpaca-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.alpaca-neck {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.alpaca-eyes {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.alpaca-hair {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.alpaca-mouth {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.alpaca-accessories {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.alpaca-leg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.alpaca-nose {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
