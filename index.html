@@ -7,6 +7,8 @@
     <title>Alpaca Image Generator</title>
     <link href="./css/normalize.css" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="./js/html2canvas.js" defer></script>
   </head>
   <body>
     <header>
@@ -14,55 +16,59 @@
     </header>
     <main>
       <div class="flex">
-        <div class="alpaca">
-          <img
-            id="alpaca-backgrounds"
-            class="alpaca-backgrounds"
-            src="./img/alpaca/backgrounds/darkblue70.png"
-          />
-          <img
-            id="alpaca-ears"
-            class="alpaca-ears"
-            src="./img/alpaca/ears/default.png"
-          />
-          <img
-            id="alpaca-accessories"
-            class="alpaca-accessories"
-            src="./img/alpaca/accessories/headphone.png"
-          />
-          <img
-            id="alpaca-hair"
-            class="alpaca-hair"
-            src="./img/alpaca/hair/default.png"
-          />
-          <img
-            id="alpaca-neck"
-            class="alpaca-neck"
-            src="./img/alpaca/neck/thick.png"
-          />
-          <img
-            id="alpaca-eyes"
-            class="alpaca-eyes"
-            src="./img/alpaca/eyes/default.png"
-          />
-          <img
-            id="alpaca-mouth"
-            class="alpaca-mouth"
-            src="./img/alpaca/mouth/default.png"
-          />
-          <img
-            id="alpaca-nose"
-            class="alpaca-nose"
-            src="./img/alpaca/nose.png"
-          />
-          <img
-            id="alpaca-leg"
-            class="alpaca-leg"
-            src="./img/alpaca/leg/default.png"
-          />
+        <div>
+          <div id="alpaca" class="alpaca">
+            <img
+              id="alpaca-backgrounds"
+              class="alpaca-backgrounds"
+              src="./img/alpaca/backgrounds/darkblue70.png"
+            />
+            <img
+              id="alpaca-ears"
+              class="alpaca-ears"
+              src="./img/alpaca/ears/default.png"
+            />
+            <img
+              id="alpaca-accessories"
+              class="alpaca-accessories"
+              src="./img/alpaca/accessories/headphone.png"
+            />
+            <img
+              id="alpaca-hair"
+              class="alpaca-hair"
+              src="./img/alpaca/hair/default.png"
+            />
+            <img
+              id="alpaca-neck"
+              class="alpaca-neck"
+              src="./img/alpaca/neck/thick.png"
+            />
+            <img
+              id="alpaca-eyes"
+              class="alpaca-eyes"
+              src="./img/alpaca/eyes/default.png"
+            />
+            <img
+              id="alpaca-mouth"
+              class="alpaca-mouth"
+              src="./img/alpaca/mouth/default.png"
+            />
+            <img
+              id="alpaca-nose"
+              class="alpaca-nose"
+              src="./img/alpaca/nose.png"
+            />
+            <img
+              id="alpaca-leg"
+              class="alpaca-leg"
+              src="./img/alpaca/leg/default.png"
+            />
+          </div>
           <div class="menu">
             <button id="randomAlpacaBtn" class="menu-button">Random 🎰</button>
-            <button class="menu-button">Download ⬇️</button>
+            <button id="downloadAlpacaBtn" class="menu-button">
+              Download ⬇️
+            </button>
           </div>
         </div>
         <div class="customizer">
@@ -79,5 +85,5 @@
     </main>
   </body>
 
-  <script src="./js/main.js" defer></script>
+  <script type="text/javascript" src="./js/main.js" defer></script>
 </html>

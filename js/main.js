@@ -350,8 +350,12 @@ let gAlpaca = {
 
 const _categoryUl = document.getElementById("categorys");
 const _categoryItemsUl = document.getElementById("categorysItems");
+const _alpacaDiv = document.getElementById("alpaca");
 const _randomAlpacaBtn = document.getElementById("randomAlpacaBtn");
+const _downloadAlpacaBtn = document.getElementById("downloadAlpacaBtn");
+
 _randomAlpacaBtn.onclick = () => getRandomAlpaca();
+_downloadAlpacaBtn.onclick = () => downloadAlpaca();
 
 onInit();
 
@@ -491,4 +495,36 @@ function getRandomAlpaca() {
 
   gCategoryId = currentCategoryId;
   loadCategoryItems(gCategoryId);
+}
+
+function downloadAlpaca() {
+  /* html2canvas(_alpacaDiv, {
+    onrendered: function (canvas) {
+      const imageFromDiv = canvas.toDataURL("image/png");
+      console.log(imageFromDiv)
+      //create your own dialog with warning before saving file
+      //beforeDownloadReadMessage();
+      //Then download file
+      downloadURI("data:" + imageFromDiv, "alpaca.png");
+    },
+    onerror: function (err) {
+      console.log(err);
+    },
+  }); */
+
+  html2canvas(_alpacaDiv, {height: _alpacaDiv.clientHeight - 10}).then(function (canvas) {
+    const imageFromDiv = canvas.toDataURL("image/png");
+    downloadURI("data:" + imageFromDiv, "alpaca.png");
+  });
+}
+
+function downloadURI(uri, name) {
+  var link = document.createElement("a");
+
+  link.download = name;
+  link.href = uri;
+  document.body.appendChild(link);
+  link.click();
+  //after creating link you should delete dynamic link
+  //clearDynamicLink(link);
 }
