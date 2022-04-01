@@ -200,17 +200,17 @@ const categorieItems = [
       {
         id: 4,
         title: "Game Console",
-        imgPath: "./img/alpaca/neck/game-console.png",
+        imgPath: "./img/alpaca/leg/game-console.png",
       },
       {
         id: 5,
         title: "Tilt back",
-        imgPath: "./img/alpaca/neck/tilt-backward.png",
+        imgPath: "./img/alpaca/leg/tilt-backward.png",
       },
       {
         id: 6,
         title: "Tilt forward",
-        imgPath: "./img/alpaca/neck/tilt-forward.png",
+        imgPath: "./img/alpaca/leg/tilt-forward.png",
       },
     ],
   },
@@ -350,6 +350,8 @@ let gAlpaca = {
 
 const _categoryUl = document.getElementById("categorys");
 const _categoryItemsUl = document.getElementById("categorysItems");
+const _randomAlpacaBtn = document.getElementById("randomAlpacaBtn");
+_randomAlpacaBtn.onclick = () => getRandomAlpaca();
 
 onInit();
 
@@ -473,4 +475,20 @@ function setCategory(categoryId) {
   gCategoryId = categoryId;
   setActiveCategory(categoryId);
   loadCategoryItems(categoryId);
+}
+
+function getRandomAlpaca() {
+  const currentCategoryId = gCategoryId;
+  categories.map((category) => {
+    gCategoryId = category.id;
+    let currCategoryItem = categorieItems.find(
+      (categoryItem) => categoryItem.categoryId === category.id
+    );
+    let maxIndexRange = currCategoryItem.items.length - 1;
+    let randomNumber = Math.floor(Math.random() * maxIndexRange);
+    setCategoryItem(currCategoryItem.items[randomNumber].id);
+  });
+
+  gCategoryId = currentCategoryId;
+  loadCategoryItems(gCategoryId);
 }
