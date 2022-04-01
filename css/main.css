@@ -1,12 +1,13 @@
 body {
   background-color: var(--background-color);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 5em;
+  padding: 4em;
 }
 
 :root {
   --primary-color: rgb(1, 27, 75);
   --background-color: rgb(238, 237, 237);
+  --secondary-color: rgb(36, 80, 156);
 }
 
 h1 {
@@ -17,6 +18,7 @@ h1 {
 
 h2 {
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 /* Alpaca */
@@ -77,6 +79,61 @@ h2 {
 /** Customizer */
 .customizer {
   padding-left: 3em;
+}
+
+/** Category */
+.category {
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.category-item {
+  background-color: #fff;
+  color: var(--secondary-color);;
+  padding: 20px 30px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 1.3rem;
+  width: 25%;
+  margin: 10px 0px;
+  margin-right: 10px;
+}
+
+.category-item:hover {
+  cursor: pointer;
+}
+
+.category-item.grid2 {
+  width: 40%;
+}
+
+.category-item.active {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/** Menu Button */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button {
+  padding: 20px 10px;
+  width: 12em;
+  margin-right: 1em;
+  margin-top: 10px;
+  background-color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.menu-button:hover {
+  background-color: rgba(251, 249, 249, 0.856);
+  cursor: pointer;
 }
 
 /** Utils */
