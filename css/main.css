@@ -90,7 +90,7 @@ h2 {
 
 .category-item {
   background-color: #fff;
-  color: var(--secondary-color);;
+  color: var(--secondary-color);
   padding: 20px 30px;
   border-radius: 30px;
   text-align: center;
@@ -136,7 +136,29 @@ h2 {
   cursor: pointer;
 }
 
+/** Social Links */
+.social-link {
+  margin-left: 15px;
+  text-decoration: none; /* no underline */
+}
+
+.social-link_img {
+  height: 32px;
+}
+
 /** Utils */
 .flex {
   display: flex;
+}
+
+.flex.jsbetween {
+  justify-content: space-between;
+}
+
+.flex.jcenter {
+  justify-content: center;
+}
+
+.flex.acenter {
+  align-items: center;
 }

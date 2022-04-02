@@ -498,20 +498,6 @@ function getRandomAlpaca() {
 }
 
 function downloadAlpaca() {
-  /* html2canvas(_alpacaDiv, {
-    onrendered: function (canvas) {
-      const imageFromDiv = canvas.toDataURL("image/png");
-      console.log(imageFromDiv)
-      //create your own dialog with warning before saving file
-      //beforeDownloadReadMessage();
-      //Then download file
-      downloadURI("data:" + imageFromDiv, "alpaca.png");
-    },
-    onerror: function (err) {
-      console.log(err);
-    },
-  }); */
-
   html2canvas(_alpacaDiv, {height: _alpacaDiv.clientHeight - 10}).then(function (canvas) {
     const imageFromDiv = canvas.toDataURL("image/png");
     downloadURI("data:" + imageFromDiv, "alpaca.png");
